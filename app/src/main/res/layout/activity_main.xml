@@ -1,0 +1,208 @@
+<ScrollView
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#55555555"
+    tools:context=".MainActivity"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- RevealDrawableCompat测试-->
+        <TextView
+            android:id="@+id/reveal_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="reveal drawable test!"
+            android:gravity="center"/>
+        <!--指示器-->
+        <RelativeLayout
+            android:id="@+id/dialog_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+            <com.xiaoxin.materialui.view.PageIndicator
+                android:id="@+id/page_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="49.0dip"/>
+            <LinearLayout
+                android:id="@+id/step_icons_container"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:orientation="horizontal"
+                android:paddingLeft="37.0dip"
+                android:paddingRight="37.0dip" >
+
+                <TextView
+                    android:id="@+id/ic_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingTop="2.0dip"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ic_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingTop="2.0dip"
+                    android:text="2"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ic_3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingTop="2.0dip"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ic_4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:paddingTop="2.0dip"
+                    android:text="4"
+                    android:textColor="@android:color/white"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- SplashIn动画-->
+        <com.xiaoxin.materialui.view.CircleInCompoundButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:background="@null"/>
+        <!--分割线动画-->
+        <com.xiaoxin.materialui.view.AnimatedPathView
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            />
+        <!-- EditText提示线动画-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="150dp">
+                <EditText
+                    android:id="@+id/description_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@null"
+                    android:hint="tap to write"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="#ff0000"
+                    android:singleLine="true"/>
+
+                <com.xiaoxin.materialui.view.AnimatedCubicPathView
+                    android:id="@+id/path"
+                    android:layout_width="match_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@id/description_edittext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-30.0dip"
+                    app:path_color="#ff0000"
+                    app:start_delay="800" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+                <com.xiaoxin.materialui.view.VerticalCheckView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:gravity="top"
+                    android:text="星期一"/>
+                <com.xiaoxin.materialui.view.VerticalCheckView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="星期二"/>
+                <com.xiaoxin.materialui.view.VerticalCheckView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="星期三"/>
+                <com.xiaoxin.materialui.view.VerticalCheckView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="星期四"/>
+                <com.xiaoxin.materialui.view.VerticalCheckView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="星期五"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#333333">
+            <com.xiaoxin.materialui.view.MenuAndBackButton
+                android:id="@+id/menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:layout_gravity="center_vertical"
+                android:onClick="onClick"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="我是波浪抖动啊抖动"
+                android:textSize="30dp" />
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+</ScrollView>
